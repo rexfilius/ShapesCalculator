@@ -1,39 +1,52 @@
+
 package shapescalculator;
-public class Rectangle {
+import java.util.Scanner;
+public class Rectangle extends Shape {
     
-    private double length;
-    private double breadth;
+    private double getArea() {
+        return getLength() * getBreadth();
+    }
     
-    public double getLength() {
-        return length;
+    private double getPerimeter() {
+        return 2 * (getLength() + getBreadth());
     }
-    public void setLength(double length) {
-        this.length = length;
-    }
-    public double getBreadth() {
-        return breadth;
-    }
-    public void setBreadth(double breadth) {
-        this.breadth = breadth;
-    }
-    public void calculateArea() {
-        if(getLength() <= 0 || getBreadth() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double area = getLength() * getBreadth();
-            System.out.println("\nLength = " + getLength() + 
-                                "\nBreadth = " + getBreadth() + 
-                                "\nArea of Rectangle = " + area);
-        } 
-    }
-    public void calculatePerimeter() {
-        if(getLength() <= 0 || getBreadth() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double perimeter = 2 * (getLength() + getBreadth());
-            System.out.println("\nLength = " + getLength() + 
-                                "\nBreadth = " + getBreadth() + 
-                                "\nPerimeter of Rectangle = " + perimeter);
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Rectangle rectangle = new Rectangle();
+        while(true) {
+            System.out.println("Type in the Length & Breadth");
+            try {
+                double arg1 = input.nextDouble();
+                rectangle.setLength(arg1);
+                double arg2 = input.nextDouble();
+                rectangle.setBreadth(arg2);
+                System.out.println("Area of Triangle is " + rectangle.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }
     }
+     
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Rectangle rectangle = new Rectangle();
+        while(true) {
+            System.out.println("Type in the Length & Breadth");
+            try {
+                double arg1 = input.nextDouble();
+                rectangle.setLength(arg1);
+                double arg2 = input.nextDouble();
+                rectangle.setBreadth(arg2);
+                System.out.println("Perimeter of Rectangle is " + rectangle.getPerimeter());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
+    }
+    
 }

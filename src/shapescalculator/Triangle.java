@@ -1,54 +1,54 @@
+
 package shapescalculator;
-public class Triangle {
+import java.util.Scanner;
+public class Triangle extends Shape {
     
-    private double height;
-    private double baseLength;
-    private double sideLength1;
-    private double sideLength2;
+    private double getArea() {
+        return getBaseLength() * getHeight();
+    }
     
-    public double getHeight() {
-        return height;
+    private double getPerimeter() {
+        return getSideLength1() + getSideLength2() + getBaseLength();
     }
-    public void setHeight(double height) {
-        this.height = height;
-    }
-    public double getBaseLength() {
-        return baseLength;
-    }
-    public void setBaseLength(double baseLength) {
-        this.baseLength = baseLength;
-    }
-    public double getSideLength1() {
-        return sideLength1;
-    }
-    public void setSideLength1(double sideLength1) {
-        this.sideLength1 = sideLength1;
-    }
-    public double getSideLength2() {
-        return sideLength2;
-    }
-    public void setSideLength2(double sideLength2) {
-        this.sideLength2 = sideLength2;
-    }
-    public void calculateArea() {
-        if(getBaseLength() <= 0 || getHeight() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double area = 0.5 * getBaseLength() * getHeight();
-            System.out.println("\nBaseLength = " + getBaseLength() + 
-                                "\nHeight = " + getHeight() + 
-                                "\nArea of Triangle is " + area);
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Triangle triangle = new Triangle();
+        while(true) {
+            System.out.println("Type in Baselength & Height");
+            try {
+                double arg1 = input.nextDouble();
+                triangle.setBaseLength(arg1);
+                double arg2 = input.nextDouble();
+                triangle.setHeight(arg2);
+                System.out.println("Area of Triangle is " + triangle.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }
     }
-    public void calculatePerimeter() {
-        if(getBaseLength() <= 0 || getSideLength1() <= 0 || getSideLength2() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double perimeter = getBaseLength() + getSideLength1() + getSideLength2();
-            System.out.println("\nBaseLength = " + getBaseLength() + 
-                                "\nSideLength1 = " + getSideLength1() + 
-                                "\nSideLength2 = " + getSideLength2() + 
-                                "\nPerimeter of Triangle is " + perimeter);
+    
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Triangle triangle = new Triangle();
+        while(true) {
+            try {
+               System.out.println("Type in SideLength1, SideLength2 & BaseLength");
+               double arg1 = input.nextDouble();
+               triangle.setSideLength1(arg1);
+               double arg2 = input.nextDouble();
+               triangle.setSideLength2(arg2);
+               double arg3 = input.nextDouble();
+               triangle.setBaseLength(arg3);
+               System.out.println("Perimeter of Triangle is " + triangle.getPerimeter());
+               break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }   
     }
+    
 }

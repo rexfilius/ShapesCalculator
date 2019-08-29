@@ -1,31 +1,49 @@
+
 package shapescalculator;
 import static java.lang.Math.PI;
-public class Circle {
+import java.util.Scanner;
+public class Circle extends Shape{
     
-    private double radius;
+    private double getArea() {
+        return PI * getRadius() * getRadius();
+    }
     
-    public double getRadius() {
-        return radius;
+    private double getPerimeter() {
+        return 2 * PI * getRadius();
     }
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-    public void calculateArea() {
-        if(getRadius() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-          double area = PI * getRadius() * getRadius();
-          System.out.println("\nRadius of Circle = " + getRadius() + 
-                             "\nArea of Circle = " + area);
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Circle circle = new Circle();
+        while(true) {
+            System.out.println("Type in the Radius");
+            try {
+                double arg = input.nextDouble();
+                circle.setRadius(arg);
+                System.out.println("Area of Circle is " + circle.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }
     }
-    public void calculateCircumference() {
-        if(getRadius() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double circumference = 2 * PI * getRadius();
-            System.out.println("\nRaius of Circle = " + getRadius() + 
-                               "\nCicrcumference of Circle = " + circumference);
-        }  
+    
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Circle circle = new Circle();
+        while(true) {
+            System.out.println("Type in the Radius");
+            try {
+                double arg = input.nextDouble();
+                circle.setRadius(arg);
+                System.out.println("Circumference of Circle is " + circle.getPerimeter());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
     }
+    
 }

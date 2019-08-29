@@ -1,46 +1,52 @@
+
 package shapescalculator;
-public class Parallelogram {
+import java.util.Scanner;
+public class Parallelogram extends Shape {
     
-    private double height;
-    private double baseLength;
-    private double sideLength;
+    private double getArea() {
+        return getBaseLength() * getHeight();
+    }
     
-    public double getHeight() {
-        return height;
+    private double getPerimeter() {
+        return 2 * (getBaseLength() + getSideLength());
     }
-    public void setHeight(double height) {
-        this.height = height;
-    }
-    public double getBaseLength() {
-        return baseLength;
-    }
-    public void setBaseLength(double baseLength) {
-        this.baseLength = baseLength;
-    }
-    public double getSideLength() {
-        return sideLength;
-    }
-    public void setSideLength(double sideLength) {
-        this.sideLength = sideLength;
-    }
-    public void calculateArea() {
-        if(getBaseLength() <= 0 || getHeight() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double area = getBaseLength() * getHeight();
-            System.out.println("\nBaseLength = " + getBaseLength() + 
-                                "\nHeight = " + getHeight() + 
-                                "\nArea of Parallelogram = " + area);
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Parallelogram parallelogram = new Parallelogram();
+        while(true) {
+            System.out.println("Type in the BaseLength & Height");
+            try {
+                double arg1 = input.nextDouble();
+                parallelogram.setBaseLength(arg1);
+                double arg2 = input.nextDouble();
+                parallelogram.setHeight(arg2);
+                System.out.println("Area of Parallelogram is " + parallelogram.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }
     }
-    public void calculatePerimeter() {
-        if(getBaseLength() <= 0 || getSideLength() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double perimeter = 2 * (getBaseLength() + getSideLength());
-            System.out.println("\nBaseLength = " + getBaseLength() + 
-                                "\nSideLength = " + getSideLength() + 
-                                "\nPerimeter of Parallelogram = " + perimeter);
-        } 
+    
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Parallelogram parallelogram = new Parallelogram();
+        while(true) {
+            System.out.println("Type in the BaseLength & SideLength");
+            try {
+                double arg1 = input.nextDouble();
+                parallelogram.setBaseLength(arg1);
+                double arg2 = input.nextDouble();
+                parallelogram.setSideLength(arg2);
+                System.out.println("Perimeter of Parallelogram is " + parallelogram.getPerimeter());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
     }
+    
 }

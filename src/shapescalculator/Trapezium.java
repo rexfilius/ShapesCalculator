@@ -1,63 +1,58 @@
+
 package shapescalculator;
-public class Trapezium {
+import java.util.Scanner;
+public class Trapezium extends Shape {
     
-    private double height;
-    private double topLength;
-    private double baseLength;
-    private double sideLength1;
-    private double sideLength2;
+    private double getArea() {
+        return (0.5 *(getTopLength() + getBaseLength())) *getHeight();
+    }
     
-    public double getHeight() {
-        return height;
+    private double getPerimeter() {
+        return getTopLength() + getBaseLength() + getSideLength1() + getSideLength2();
     }
-    public void setHeight(double height) {
-        this.height = height;
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Trapezium trapezium = new Trapezium();
+        while(true) {
+            System.out.println("Type in the TopLength, Baselength & Height");
+            try {
+                double arg1 = input.nextDouble();
+                trapezium.setTopLength(arg1);
+                double arg2 = input.nextDouble();
+                trapezium.setBaseLength(arg2);
+                double arg3 = input.nextDouble();
+                trapezium.setHeight(arg3);
+                System.out.println("Area of Trapezium is " + trapezium.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
+    }   
+    
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Trapezium trapezium = new Trapezium();
+        while(true) {
+            System.out.println("Type in the TopLength, Baselength, SideLength1 & SideLength2");
+            try {
+                double arg1 = input.nextDouble();
+                trapezium.setTopLength(arg1);
+                double arg2 = input.nextDouble();
+                trapezium.setBaseLength(arg2);
+                double arg3 = input.nextDouble();
+                trapezium.setSideLength1(arg3);
+                double arg4 = input.nextDouble();
+                trapezium.setSideLength2(arg4);
+                System.out.println("Perimeter of Trapezium is " + trapezium.getPerimeter());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
     }
-    public double getTopLength() {
-        return topLength;
-    }
-    public void setTopLength(double topLength) {
-        this.topLength = topLength;
-    }
-    public double getBaseLength() {
-        return baseLength;
-    }
-    public void setBaseLength(double baseLength) {
-        this.baseLength = baseLength;
-    }
-    public double getSideLength1() {
-        return sideLength1;
-    }
-    public void setSideLength1(double sideLength1) {
-        this.sideLength1 = sideLength1;
-    }
-    public double getSideLength2() {
-        return sideLength2;
-    }
-    public void setSideLength2(double sideLength2) {
-        this.sideLength2 = sideLength2;
-    }
-    public void calculateArea() {
-        if(getTopLength() <= 0 || getBaseLength() <= 0 || getHeight() <= 0){
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double area = (0.5 * (getTopLength() + getBaseLength())) * getHeight();
-            System.out.println("\nTopLength = " + getTopLength() + 
-                                "\nBaseLength = " + getBaseLength() + 
-                                "\nHeight = " + getHeight() + 
-                                "\nArea of Trapezium = " + area);
-        } 
-    }
-    public void calculatePerimeter() {
-        if(getBaseLength() <= 0 || getTopLength() <= 0 || getSideLength1() <= 0 || getSideLength2() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double perimeter = getTopLength() + getBaseLength() + getSideLength1() + getSideLength2();
-            System.out.println("\nTopLength = " + getTopLength() + 
-                                "\nBaseLength = " + getBaseLength() + 
-                                "\nSideLength1 = " + getSideLength1() + 
-                                "\nSideLength2 = " + getSideLength2() + 
-                                "\nPerimeter of Trapezium = " + perimeter);
-        } 
-    }
+    
 }

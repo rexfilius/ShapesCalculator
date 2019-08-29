@@ -1,30 +1,48 @@
+
 package shapescalculator;
-public class Square {
+import java.util.Scanner;
+public class Square extends Shape {
     
-    private double sideLength;
+    private double getArea() {
+        return getSideLength() * getSideLength();
+    }
     
-    public double getSideLength() {
-        return sideLength;
+    private double getPerimeter() {
+        return 4 * getSideLength();
     }
-    public void setSideLength(double sideLength) {
-           this.sideLength = sideLength; 
-    }
-    public void calculateArea() {
-        if(getSideLength() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double area = getSideLength() * getSideLength();
-            System.out.println("\nSideLength = " + getSideLength() + 
-                                "\nArea of Square = " + area);
-        }   
-    }
-    public void calculatePerimeter() {
-        if(getSideLength() <= 0) {
-            System.out.println("INVALID! Figure cannot be Zero or Negative");
-        } else {
-            double perimeter = 4 * getSideLength();
-            System.out.println("\nSideLength = " + getSideLength() + 
-                                "\nPerimeter of Square = " + perimeter);
+    
+    public void printArea() {
+        Scanner input = new Scanner(System.in);
+        Square square = new Square();
+        while(true) {
+            System.out.println("Type in the SideLength");
+            try {
+                double arg = input.nextDouble();
+                square.setSideLength(arg);
+                System.out.println("Area of Square is " + square.getArea());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
         }
     }
+    
+    public void printPerimeter() {
+        Scanner input = new Scanner(System.in);
+        Square square = new Square();
+        while(true) {
+            System.out.println("Type in the SideLength");
+            try {
+                double arg = input.nextDouble();
+                square.setSideLength(arg);
+                System.out.println("Perimeter of Square is " + square.getPerimeter());
+                break;
+            } catch(Exception e) {
+                input.nextLine();
+                System.out.println("\nYOU ENTERED INVALID DATA\n");
+            }
+        }
+    }
+    
 }
