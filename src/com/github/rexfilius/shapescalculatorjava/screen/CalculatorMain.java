@@ -1,7 +1,8 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.screen;
 
-public class Calculator2D {
+public class CalculatorMain {
+
     public static void main(String[] args) {
         
         Calculator.run();

@@ -1,6 +1,10 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.models;
+
+import com.github.rexfilius.shapescalculatorjava.screen.Screen;
+
 import java.util.Scanner;
+
 public class Rectangle extends Shape {
     
     private double getArea() {
@@ -25,7 +29,7 @@ public class Rectangle extends Shape {
                 break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }
     }
@@ -44,7 +48,7 @@ public class Rectangle extends Shape {
                 break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }
     }

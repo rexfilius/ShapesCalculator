@@ -1,8 +1,16 @@
 
-package shapescalculator;
-import static java.lang.Math.PI;
+package com.github.rexfilius.shapescalculatorjava.models;
+
+import com.github.rexfilius.shapescalculatorjava.screen.Screen;
+
 import java.util.Scanner;
-public class Circle extends Shape{
+
+import static java.lang.Math.PI;
+
+public class Circle extends Shape {
+
+    Circle circle;
+    Scanner input = new Scanner(System.in);
     
     private double getArea() {
         return PI * getRadius() * getRadius();
@@ -13,8 +21,8 @@ public class Circle extends Shape{
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Circle circle = new Circle();
+        // Scanner input = new Scanner(System.in);
+        circle = new Circle();
         while(true) {
             System.out.println("Type in the Radius");
             try {
@@ -24,14 +32,14 @@ public class Circle extends Shape{
                 break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }
     }
     
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Circle circle = new Circle();
+        // Scanner input = new Scanner(System.in);
+        circle = new Circle();
         while(true) {
             System.out.println("Type in the Radius");
             try {
@@ -41,7 +49,7 @@ public class Circle extends Shape{
                 break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }
     }

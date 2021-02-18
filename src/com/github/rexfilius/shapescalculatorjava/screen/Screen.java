@@ -1,7 +1,11 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.screen;
+
 import java.util.Scanner;
+
 public class Screen {
+
+    public static final String INVALID_DATA = "\nYOU ENTERED INVALID DATA\n";
     
     Scanner input = new Scanner(System.in);
     String select = null;

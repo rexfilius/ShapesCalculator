@@ -1,5 +1,5 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.models;
 
 public class Shape {
     

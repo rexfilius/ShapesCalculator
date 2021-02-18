@@ -1,7 +1,14 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.models;
+
+import com.github.rexfilius.shapescalculatorjava.screen.Screen;
+
 import java.util.Scanner;
+
 public class Triangle extends Shape {
+
+    Triangle triangle;
+    Scanner input = new Scanner(System.in);
     
     private double getArea() {
         return getBaseLength() * getHeight();
@@ -12,8 +19,8 @@ public class Triangle extends Shape {
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Triangle triangle = new Triangle();
+        //Scanner input = new Scanner(System.in);
+        triangle = new Triangle();
         while(true) {
             System.out.println("Type in Baselength & Height");
             try {
@@ -25,14 +32,14 @@ public class Triangle extends Shape {
                 break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }
     }
     
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Triangle triangle = new Triangle();
+        //Scanner input = new Scanner(System.in);
+        triangle = new Triangle();
         while(true) {
             try {
                System.out.println("Type in SideLength1, SideLength2 & BaseLength");
@@ -46,7 +53,7 @@ public class Triangle extends Shape {
                break;
             } catch(Exception e) {
                 input.nextLine();
-                System.out.println("\nYOU ENTERED INVALID DATA\n");
+                System.out.println(Screen.INVALID_DATA);
             }
         }   
     }

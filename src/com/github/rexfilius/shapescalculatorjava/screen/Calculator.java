@@ -1,5 +1,7 @@
 
-package shapescalculator;
+package com.github.rexfilius.shapescalculatorjava.screen;
+
+import com.github.rexfilius.shapescalculatorjava.models.*;
 
 public class Calculator {
     

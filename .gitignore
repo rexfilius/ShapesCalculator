@@ -1,5 +1,9 @@
 build.xml
 manifest.mf
+ShapesCalculator.iml
 build/
 nbproject/
+test/
+out/
+.idea/
 test/
