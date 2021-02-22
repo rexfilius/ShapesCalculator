@@ -1,6 +1,6 @@
 build.xml
 manifest.mf
-ShapesCalculator.iml
+ShapesCalculator-Java.iml
 build/
 nbproject/
 test/

@@ -6,6 +6,9 @@ import com.github.rexfilius.shapescalculatorjava.screen.Screen;
 import java.util.Scanner;
 
 public class Square extends Shape {
+
+    Square square;
+    Scanner input = new Scanner(System.in);
     
     private double getArea() {
         return getSideLength() * getSideLength();
@@ -16,8 +19,8 @@ public class Square extends Shape {
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Square square = new Square();
+        //Scanner input = new Scanner(System.in);
+        square = new Square();
         while(true) {
             System.out.println("Type in the SideLength");
             try {
@@ -33,8 +36,8 @@ public class Square extends Shape {
     }
     
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Square square = new Square();
+        //Scanner input = new Scanner(System.in);
+        square = new Square();
         while(true) {
             System.out.println("Type in the SideLength");
             try {

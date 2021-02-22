@@ -6,7 +6,10 @@ import com.github.rexfilius.shapescalculatorjava.screen.Screen;
 import java.util.Scanner;
 
 public class Rectangle extends Shape {
-    
+
+    Rectangle rectangle;
+    Scanner input = new Scanner(System.in);
+
     private double getArea() {
         return getLength() * getBreadth();
     }
@@ -16,8 +19,8 @@ public class Rectangle extends Shape {
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Rectangle rectangle = new Rectangle();
+        //Scanner input = new Scanner(System.in);
+        rectangle = new Rectangle();
         while(true) {
             System.out.println("Type in the Length & Breadth");
             try {
@@ -35,8 +38,8 @@ public class Rectangle extends Shape {
     }
      
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Rectangle rectangle = new Rectangle();
+        //Scanner input = new Scanner(System.in);
+        rectangle = new Rectangle();
         while(true) {
             System.out.println("Type in the Length & Breadth");
             try {

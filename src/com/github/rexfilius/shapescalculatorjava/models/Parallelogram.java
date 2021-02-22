@@ -6,7 +6,10 @@ import com.github.rexfilius.shapescalculatorjava.screen.Screen;
 import java.util.Scanner;
 
 public class Parallelogram extends Shape {
-    
+
+    Parallelogram parallelogram;
+    Scanner input = new Scanner(System.in);
+
     private double getArea() {
         return getBaseLength() * getHeight();
     }
@@ -16,8 +19,8 @@ public class Parallelogram extends Shape {
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Parallelogram parallelogram = new Parallelogram();
+        //Scanner input = new Scanner(System.in);
+        parallelogram = new Parallelogram();
         while(true) {
             System.out.println("Type in the BaseLength & Height");
             try {
@@ -35,8 +38,8 @@ public class Parallelogram extends Shape {
     }
     
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Parallelogram parallelogram = new Parallelogram();
+        //Scanner input = new Scanner(System.in);
+        parallelogram = new Parallelogram();
         while(true) {
             System.out.println("Type in the BaseLength & SideLength");
             try {

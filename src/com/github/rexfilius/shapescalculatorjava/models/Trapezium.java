@@ -6,7 +6,10 @@ import com.github.rexfilius.shapescalculatorjava.screen.Screen;
 import java.util.Scanner;
 
 public class Trapezium extends Shape {
-    
+
+    Trapezium trapezium;
+    Scanner input = new Scanner(System.in);
+
     private double getArea() {
         return (0.5 *(getTopLength() + getBaseLength())) *getHeight();
     }
@@ -16,8 +19,8 @@ public class Trapezium extends Shape {
     }
     
     public void printArea() {
-        Scanner input = new Scanner(System.in);
-        Trapezium trapezium = new Trapezium();
+        //Scanner input = new Scanner(System.in);
+        trapezium = new Trapezium();
         while(true) {
             System.out.println("Type in the TopLength, Baselength & Height");
             try {
@@ -37,8 +40,8 @@ public class Trapezium extends Shape {
     }   
     
     public void printPerimeter() {
-        Scanner input = new Scanner(System.in);
-        Trapezium trapezium = new Trapezium();
+        //Scanner input = new Scanner(System.in);
+        trapezium = new Trapezium();
         while(true) {
             System.out.println("Type in the TopLength, Baselength, SideLength1 & SideLength2");
             try {
