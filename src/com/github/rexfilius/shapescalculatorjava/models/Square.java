@@ -26,6 +26,7 @@ public class Square extends Shape {
             try {
                 double arg = input.nextDouble();
                 square.setSideLength(arg);
+                System.out.println("SideLength: " + arg);
                 System.out.println("Area of Square is " + square.getArea());
                 break;
             } catch(Exception e) {
@@ -43,6 +44,7 @@ public class Square extends Shape {
             try {
                 double arg = input.nextDouble();
                 square.setSideLength(arg);
+                System.out.println("SideLength: " + arg);
                 System.out.println("Perimeter of Square is " + square.getPerimeter());
                 break;
             } catch(Exception e) {

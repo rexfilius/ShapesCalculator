@@ -6,16 +6,16 @@ import java.util.Scanner;
 public class Screen {
 
     public static final String INVALID_DATA = "\nYOU ENTERED INVALID DATA\n";
-    private final String firstMessage =
-            "This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes\n"
-                    + "List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]\n"
-                    + "Select a Shape: [Type it in]";
 
     Scanner input = new Scanner(System.in);
     String select = null;
     String parameter = null;
 
     public String firstMenu() {
+        String firstMessage =
+                "This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes\n"
+                        + "List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]\n"
+                        + "Select a Shape: [Type it in]";
         System.out.println(firstMessage);
         select = input.nextLine();
         checkFirstMenu();

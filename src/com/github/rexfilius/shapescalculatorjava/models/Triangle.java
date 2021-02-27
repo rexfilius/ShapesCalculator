@@ -19,15 +19,19 @@ public class Triangle extends Shape {
     }
     
     public void printArea() {
-        //Scanner input = new Scanner(System.in);
         triangle = new Triangle();
         while(true) {
-            System.out.println("Type in Baselength & Height");
             try {
+                System.out.println("Type in the BaseLength of the Triangle");
                 double arg1 = input.nextDouble();
                 triangle.setBaseLength(arg1);
+                System.out.println("BaseLength: " + arg1);
+
+                System.out.println("Type in the Height of the Triangle");
                 double arg2 = input.nextDouble();
                 triangle.setHeight(arg2);
+                System.out.println("Height: " + arg2);
+
                 System.out.println("Area of Triangle is " + triangle.getArea());
                 break;
             } catch(Exception e) {
@@ -38,17 +42,24 @@ public class Triangle extends Shape {
     }
     
     public void printPerimeter() {
-        //Scanner input = new Scanner(System.in);
         triangle = new Triangle();
         while(true) {
             try {
-               System.out.println("Type in SideLength1, SideLength2 & BaseLength");
+               System.out.println("Type in SideLength-1 of the Triangle");
                double arg1 = input.nextDouble();
                triangle.setSideLength1(arg1);
+               System.out.println("SideLength-1: " + arg1);
+
+               System.out.println("Type in SideLength-2 of the Triangle");
                double arg2 = input.nextDouble();
                triangle.setSideLength2(arg2);
+               System.out.println("SideLength-2: " + arg2);
+
+               System.out.println("Type in BaseLength of the Triangle");
                double arg3 = input.nextDouble();
                triangle.setBaseLength(arg3);
+               System.out.println("BaseLength: " + arg3);
+
                System.out.println("Perimeter of Triangle is " + triangle.getPerimeter());
                break;
             } catch(Exception e) {

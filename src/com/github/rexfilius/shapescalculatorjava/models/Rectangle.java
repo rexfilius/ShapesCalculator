@@ -19,15 +19,19 @@ public class Rectangle extends Shape {
     }
     
     public void printArea() {
-        //Scanner input = new Scanner(System.in);
         rectangle = new Rectangle();
         while(true) {
-            System.out.println("Type in the Length & Breadth");
             try {
+                System.out.println("Type in the Length of the Rectangle");
                 double arg1 = input.nextDouble();
                 rectangle.setLength(arg1);
+                System.out.println("Length: " + arg1);
+
+                System.out.println("Type in the Breadth of the Rectangle");
                 double arg2 = input.nextDouble();
                 rectangle.setBreadth(arg2);
+                System.out.println("Breadth: " + arg2);
+
                 System.out.println("Area of Triangle is " + rectangle.getArea());
                 break;
             } catch(Exception e) {
@@ -38,15 +42,19 @@ public class Rectangle extends Shape {
     }
      
     public void printPerimeter() {
-        //Scanner input = new Scanner(System.in);
         rectangle = new Rectangle();
         while(true) {
-            System.out.println("Type in the Length & Breadth");
             try {
+                System.out.println("Type in the Length of the Rectangle");
                 double arg1 = input.nextDouble();
                 rectangle.setLength(arg1);
+                System.out.println("Length: " + arg1);
+
+                System.out.println("Type in the Breadth of the Rectangle");
                 double arg2 = input.nextDouble();
                 rectangle.setBreadth(arg2);
+                System.out.println("Breadth: " + arg2);
+
                 System.out.println("Perimeter of Rectangle is " + rectangle.getPerimeter());
                 break;
             } catch(Exception e) {
