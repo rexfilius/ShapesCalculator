@@ -19,14 +19,14 @@ public class Square extends Shape {
     }
     
     public void printArea() {
-        //Scanner input = new Scanner(System.in);
         square = new Square();
         while(true) {
-            System.out.println("Type in the SideLength");
             try {
+                System.out.println("Type in the SideLength of the Square");
                 double arg = input.nextDouble();
                 square.setSideLength(arg);
                 System.out.println("SideLength: " + arg);
+
                 System.out.println("Area of Square is " + square.getArea());
                 break;
             } catch(Exception e) {
@@ -37,14 +37,14 @@ public class Square extends Shape {
     }
     
     public void printPerimeter() {
-        //Scanner input = new Scanner(System.in);
         square = new Square();
         while(true) {
-            System.out.println("Type in the SideLength");
             try {
+                System.out.println("Type in the SideLength of the Square");
                 double arg = input.nextDouble();
                 square.setSideLength(arg);
                 System.out.println("SideLength: " + arg);
+
                 System.out.println("Perimeter of Square is " + square.getPerimeter());
                 break;
             } catch(Exception e) {

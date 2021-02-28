@@ -11,7 +11,7 @@ public class Triangle extends Shape {
     Scanner input = new Scanner(System.in);
     
     private double getArea() {
-        return getBaseLength() * getHeight();
+        return 0.5 * (getBaseLength() * getHeight());
     }
     
     private double getPerimeter() {
