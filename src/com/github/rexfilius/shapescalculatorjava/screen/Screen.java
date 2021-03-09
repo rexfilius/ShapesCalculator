@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Screen {
 
     public static final String INVALID_DATA = "\nYOU ENTERED INVALID DATA\n";
+    public static final String INVALID_CASING = "\nCHECK YOUR CASING/WORDS. TYPE CORRECTLY\n";
 
     Scanner input = new Scanner(System.in);
     String select = null;
@@ -26,14 +27,13 @@ public class Screen {
         while (!(select.equals("Circle") || select.equals("Triangle")
                 || select.equals("Square") || select.equals("Rectangle")
                 || select.equals("Parallelogram") || select.equals("Trapezium"))) {
-            System.out.println("\nCHECK YOUR CASING/WORDS. TYPE CORRECTLY\n");
+            System.out.println(INVALID_CASING);
             firstMenu();
         }
     }
 
     public String secondMenu() {
-        System.out.println("What do you want to calculate? Area or Perimeter?");
-        System.out.println("Type it in:");
+        System.out.println("What do you want to calculate: Area? or Perimeter? [Type it in]");
         parameter = input.nextLine();
         checkSecondMenu();
         return parameter;
@@ -41,7 +41,7 @@ public class Screen {
 
     private void checkSecondMenu() {
         while (!(parameter.equals("Area") || parameter.equals("Perimeter"))) {
-            System.out.println("\nCHECK YOUR CASING/WORDS. TYPE CORRECTLY\n");
+            System.out.println(INVALID_CASING);
             secondMenu();
         }
     }
