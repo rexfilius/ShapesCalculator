@@ -24,11 +24,11 @@ public class Circle extends Shape {
         circle = new Circle();
         while (true) {
             try {
-                System.out.println("Type in the Radius of the Circle");
-                double arg = input.nextDouble();
-                circle.setRadius(arg);
-                System.out.println("Radius: " + arg);
-
+//                System.out.println("Type in the Radius of the Circle");
+//                double arg = input.nextDouble();
+//                circle.setRadius(arg);
+//                System.out.println("Radius: " + arg);
+                getRadiusOfCircle();
                 System.out.println("Area of Circle is " + circle.getArea());
                 break;
             } catch (Exception e) {
@@ -42,11 +42,11 @@ public class Circle extends Shape {
         circle = new Circle();
         while (true) {
             try {
-                System.out.println("Type in the Radius of the Circle");
-                double arg = input.nextDouble();
-                circle.setRadius(arg);
-                System.out.println("Radius: " + arg);
-
+//                System.out.println("Type in the Radius of the Circle");
+//                double arg = input.nextDouble();
+//                circle.setRadius(arg);
+//                System.out.println("Radius: " + arg);
+                getRadiusOfCircle();
                 System.out.println("Circumference of Circle is " + circle.getPerimeter());
                 break;
             } catch (Exception e) {
@@ -54,6 +54,13 @@ public class Circle extends Shape {
                 System.out.println(Screen.INVALID_DATA);
             }
         }
+    }
+
+    private void getRadiusOfCircle() {
+        System.out.println("Type in the Radius of the Circle");
+        double arg = input.nextDouble();
+        circle.setRadius(arg);
+        System.out.println("Radius: " + arg);
     }
 
 }
