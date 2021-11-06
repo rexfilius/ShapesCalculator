@@ -12,24 +12,23 @@ public class Circle extends Shape {
     Circle circle;
     Scanner input = new Scanner(System.in);
 
-    private double getArea() {
+    @Override
+    public double area() {
         return PI * getRadius() * getRadius();
     }
 
-    private double getPerimeter() {
+    @Override
+    public double perimeter() {
         return 2 * PI * getRadius();
     }
 
-    public void printArea() {
+    @Override
+    public void calculateArea() {
         circle = new Circle();
         while (true) {
             try {
-//                System.out.println("Type in the Radius of the Circle");
-//                double arg = input.nextDouble();
-//                circle.setRadius(arg);
-//                System.out.println("Radius: " + arg);
                 getRadiusOfCircle();
-                System.out.println("Area of Circle is " + circle.getArea());
+                System.out.println("Area of Circle is " + circle.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -38,16 +37,13 @@ public class Circle extends Shape {
         }
     }
 
-    public void printPerimeter() {
+    @Override
+    public void calculatePerimeter() {
         circle = new Circle();
         while (true) {
             try {
-//                System.out.println("Type in the Radius of the Circle");
-//                double arg = input.nextDouble();
-//                circle.setRadius(arg);
-//                System.out.println("Radius: " + arg);
                 getRadiusOfCircle();
-                System.out.println("Circumference of Circle is " + circle.getPerimeter());
+                System.out.println("Circumference of Circle is " + circle.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

@@ -10,15 +10,18 @@ public class Trapezium extends Shape {
     Trapezium trapezium;
     Scanner input = new Scanner(System.in);
 
-    private double getArea() {
+    @Override
+    public double area() {
         return (0.5 * (getTopLength() + getBaseLength())) * getHeight();
     }
 
-    private double getPerimeter() {
+    @Override
+    public double perimeter() {
         return getTopLength() + getBaseLength() + getSideLength1() + getSideLength2();
     }
 
-    public void printArea() {
+    @Override
+    public void calculateArea() {
         trapezium = new Trapezium();
         while (true) {
             try {
@@ -37,7 +40,7 @@ public class Trapezium extends Shape {
                 trapezium.setHeight(arg3);
                 System.out.println("Height: " + arg3);
 
-                System.out.println("Area of Trapezium is " + trapezium.getArea());
+                System.out.println("Area of Trapezium is " + trapezium.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -46,7 +49,8 @@ public class Trapezium extends Shape {
         }
     }
 
-    public void printPerimeter() {
+    @Override
+    public void calculatePerimeter() {
         trapezium = new Trapezium();
         while (true) {
             try {
@@ -70,7 +74,7 @@ public class Trapezium extends Shape {
                 trapezium.setSideLength2(arg4);
                 System.out.println("SideLength-2: " + arg4);
 
-                System.out.println("Perimeter of Trapezium is " + trapezium.getPerimeter());
+                System.out.println("Perimeter of Trapezium is " + trapezium.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

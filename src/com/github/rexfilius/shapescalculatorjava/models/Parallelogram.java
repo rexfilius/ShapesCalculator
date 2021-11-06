@@ -10,15 +10,18 @@ public class Parallelogram extends Shape {
     Parallelogram parallelogram;
     Scanner input = new Scanner(System.in);
 
-    private double getArea() {
+    @Override
+    public double area() {
         return getBaseLength() * getHeight();
     }
-    
-    private double getPerimeter() {
+
+    @Override
+    public double perimeter() {
         return 2 * (getBaseLength() + getSideLength());
     }
-    
-    public void printArea() {
+
+    @Override
+    public void calculateArea() {
         parallelogram = new Parallelogram();
         while(true) {
             try {
@@ -32,7 +35,7 @@ public class Parallelogram extends Shape {
                 parallelogram.setHeight(arg2);
                 System.out.println("Height: " + arg2);
 
-                System.out.println("Area of Parallelogram is " + parallelogram.getArea());
+                System.out.println("Area of Parallelogram is " + parallelogram.area());
                 break;
             } catch(Exception e) {
                 input.nextLine();
@@ -40,8 +43,9 @@ public class Parallelogram extends Shape {
             }
         }
     }
-    
-    public void printPerimeter() {
+
+    @Override
+    public void calculatePerimeter() {
         parallelogram = new Parallelogram();
         while(true) {
             try {
@@ -55,7 +59,7 @@ public class Parallelogram extends Shape {
                 parallelogram.setSideLength(arg2);
                 System.out.println("SideLength: " + arg2);
 
-                System.out.println("Perimeter of Parallelogram is " + parallelogram.getPerimeter());
+                System.out.println("Perimeter of Parallelogram is " + parallelogram.perimeter());
                 break;
             } catch(Exception e) {
                 input.nextLine();

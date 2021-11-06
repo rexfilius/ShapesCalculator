@@ -10,29 +10,23 @@ public class Rectangle extends Shape {
     Rectangle rectangle;
     Scanner input = new Scanner(System.in);
 
-    private double getArea() {
+    @Override
+    public double area() {
         return getLength() * getBreadth();
     }
 
-    private double getPerimeter() {
+    @Override
+    public double perimeter() {
         return 2 * (getLength() + getBreadth());
     }
 
-    public void printArea() {
+    @Override
+    public void calculateArea() {
         rectangle = new Rectangle();
         while (true) {
             try {
-//                System.out.println("Type in the Length of the Rectangle");
-//                double arg1 = input.nextDouble();
-//                rectangle.setLength(arg1);
-//                System.out.println("Length: " + arg1);
-//
-//                System.out.println("Type in the Breadth of the Rectangle");
-//                double arg2 = input.nextDouble();
-//                rectangle.setBreadth(arg2);
-//                System.out.println("Breadth: " + arg2);
                 getLengthAndBreadth();
-                System.out.println("Area of Triangle is " + rectangle.getArea());
+                System.out.println("Area of Triangle is " + rectangle.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -41,21 +35,13 @@ public class Rectangle extends Shape {
         }
     }
 
-    public void printPerimeter() {
+    @Override
+    public void calculatePerimeter() {
         rectangle = new Rectangle();
         while (true) {
             try {
-//                System.out.println("Type in the Length of the Rectangle");
-//                double arg1 = input.nextDouble();
-//                rectangle.setLength(arg1);
-//                System.out.println("Length: " + arg1);
-//
-//                System.out.println("Type in the Breadth of the Rectangle");
-//                double arg2 = input.nextDouble();
-//                rectangle.setBreadth(arg2);
-//                System.out.println("Breadth: " + arg2);
                 getLengthAndBreadth();
-                System.out.println("Perimeter of Rectangle is " + rectangle.getPerimeter());
+                System.out.println("Perimeter of Rectangle is " + rectangle.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

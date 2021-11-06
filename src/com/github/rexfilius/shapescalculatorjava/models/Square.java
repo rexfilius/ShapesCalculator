@@ -9,45 +9,41 @@ public class Square extends Shape {
 
     Square square;
     Scanner input = new Scanner(System.in);
-    
-    private double getArea() {
+
+    @Override
+    public double area() {
         return getSideLength() * getSideLength();
     }
-    
-    private double getPerimeter() {
+
+    @Override
+    public double perimeter() {
         return 4 * getSideLength();
     }
-    
-    public void printArea() {
+
+    @Override
+    public void calculateArea() {
         square = new Square();
-        while(true) {
+        while (true) {
             try {
-//                System.out.println("Type in the SideLength of the Square");
-//                double arg = input.nextDouble();
-//                square.setSideLength(arg);
-//                System.out.println("SideLength: " + arg);
                 getSideLengthOfSquare();
-                System.out.println("Area of Square is " + square.getArea());
+                System.out.println("Area of Square is " + square.area());
                 break;
-            } catch(Exception e) {
+            } catch (Exception e) {
                 input.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
-    
-    public void printPerimeter() {
+
+    @Override
+    public void calculatePerimeter() {
         square = new Square();
-        while(true) {
+        while (true) {
             try {
-//                System.out.println("Type in the SideLength of the Square");
-//                double arg = input.nextDouble();
-//                square.setSideLength(arg);
-//                System.out.println("SideLength: " + arg);
                 getSideLengthOfSquare();
-                System.out.println("Perimeter of Square is " + square.getPerimeter());
+                System.out.println("Perimeter of Square is " + square.perimeter());
                 break;
-            } catch(Exception e) {
+            } catch (Exception e) {
                 input.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
@@ -60,5 +56,5 @@ public class Square extends Shape {
         square.setSideLength(arg);
         System.out.println("SideLength: " + arg);
     }
-    
+
 }
