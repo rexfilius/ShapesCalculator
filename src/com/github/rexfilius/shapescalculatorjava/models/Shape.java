@@ -1,7 +1,7 @@
 
 package com.github.rexfilius.shapescalculatorjava.models;
 
-public class Shape implements Measurable {
+abstract class Shape implements Measurable {
 
     private double length;
     private double breadth;
@@ -85,23 +85,4 @@ public class Shape implements Measurable {
         this.radius = radius;
     }
 
-    @Override
-    public double area() {
-        return 0;
-    }
-
-    @Override
-    public double perimeter() {
-        return 0;
-    }
-
-    @Override
-    public void calculateArea() {
-        // No-op
-    }
-
-    @Override
-    public void calculatePerimeter() {
-        // No-op
-    }
 }
