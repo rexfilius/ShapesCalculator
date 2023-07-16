@@ -14,9 +14,10 @@ public class Screen {
 
     public String firstMenu() {
         String firstMessage =
-                "This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes\n"
-                        + "List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]\n"
-                        + "Select a Shape: [Type it in]";
+                """
+                        This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes
+                        List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]
+                        Select a Shape: [Type it in]""";
         System.out.println(firstMessage);
         select = input.nextLine();
         checkFirstMenu();
@@ -50,18 +51,14 @@ public class Screen {
         System.out.println("\nPress 1 to go back to MENU\nPress 2 to END");
         try {
             Scanner sc = new Scanner(System.in);
-            int d = sc.nextInt();
-            switch (d) {
-                case 1:
-                    Calculator.run();
-                    break;
-                case 2:
-                    System.out.println("program is ending...");
-                    break;
-                default:
+            int userInput = sc.nextInt();
+            switch (userInput) {
+                case 1 -> Calculator.run();
+                case 2 -> System.out.println("program is ending...");
+                default -> {
                     System.out.println("Invalid Input");
                     Screen.thirdMenu();
-                    break;
+                }
             }
         } catch (Exception e) {
             System.out.println("\nInvalid Input\n");
