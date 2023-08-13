@@ -3,7 +3,11 @@ package com.github.rexfilius.shapescalculatorjava.screen;
 
 import com.github.rexfilius.shapescalculatorjava.models.*;
 
+import java.util.Scanner;
+
 public class Calculator {
+
+    static Scanner scanner = new Scanner(System.in);
 
     public static void run() {
 
@@ -22,9 +26,9 @@ public class Calculator {
             case "Circle" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Circle().calculateArea();
+                    new Circle().calculateArea(scanner);
                 else
-                    new Circle().calculatePerimeter();
+                    new Circle().calculatePerimeter(scanner);
             }
             case "Square" -> {
                 parameterInput = menu.secondMenu();

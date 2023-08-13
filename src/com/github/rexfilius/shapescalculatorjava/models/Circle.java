@@ -8,8 +8,8 @@ import static java.lang.Math.PI;
 
 public class Circle extends Shape {
 
-    Circle circle;
-    Scanner input = new Scanner(System.in);
+    // Circle circle;
+    //Scanner input = new Scanner(System.in);
 
     @Override
     public double area() {
@@ -23,26 +23,21 @@ public class Circle extends Shape {
 
     @Override
     public void calculateArea() {
-        circle = new Circle();
-        while (true) {
-            try {
-                getRadiusOfCircle();
-                System.out.printf("Area of Circle is %.3f", circle.area());
-                break;
-            } catch (Exception e) {
-                input.nextLine();
-                System.out.println(Screen.INVALID_DATA);
-            }
-        }
+
     }
 
     @Override
     public void calculatePerimeter() {
-        circle = new Circle();
+
+    }
+
+
+    public void calculateArea(Scanner input) {
+        //circle = new Circle();
         while (true) {
             try {
-                getRadiusOfCircle();
-                System.out.printf("Circumference of Circle is %.3f", circle.perimeter());
+                getRadiusOfCircle(input);
+                System.out.printf("Area of Circle is %.3f", this.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -51,10 +46,24 @@ public class Circle extends Shape {
         }
     }
 
-    private void getRadiusOfCircle() {
+    public void calculatePerimeter(Scanner input) {
+        // circle = new Circle();
+        while (true) {
+            try {
+                getRadiusOfCircle(input);
+                System.out.printf("Circumference of Circle is %.3f", this.perimeter());
+                break;
+            } catch (Exception e) {
+                input.nextLine();
+                System.out.println(Screen.INVALID_DATA);
+            }
+        }
+    }
+
+    private void getRadiusOfCircle(Scanner input) {
         System.out.println("Type in the Radius of the Circle");
         double arg = input.nextDouble();
-        circle.setRadius(arg);
+        this.setRadius(arg);
         System.out.println("Radius: " + arg);
     }
 
