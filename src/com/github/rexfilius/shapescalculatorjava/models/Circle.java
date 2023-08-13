@@ -22,16 +22,6 @@ public class Circle extends Shape {
     }
 
     @Override
-    public void calculateArea() {
-
-    }
-
-    @Override
-    public void calculatePerimeter() {
-
-    }
-
-
     public void calculateArea(Scanner input) {
         //circle = new Circle();
         while (true) {
@@ -46,6 +36,7 @@ public class Circle extends Shape {
         }
     }
 
+    @Override
     public void calculatePerimeter(Scanner input) {
         // circle = new Circle();
         while (true) {

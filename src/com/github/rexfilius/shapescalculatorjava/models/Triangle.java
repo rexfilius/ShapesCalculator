@@ -7,9 +7,6 @@ import java.util.Scanner;
 
 public class Triangle extends Shape {
 
-    Triangle triangle;
-    Scanner input = new Scanner(System.in);
-
     @Override
     public double area() {
         return 0.5 * (getBaseLength() * getHeight());
@@ -21,53 +18,51 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public void calculateArea() {
-        triangle = new Triangle();
+    public void calculateArea(Scanner scanner) {
         while (true) {
             try {
                 System.out.println("Type in the BaseLength of the Triangle");
-                double arg1 = input.nextDouble();
-                triangle.setBaseLength(arg1);
+                double arg1 = scanner.nextDouble();
+                this.setBaseLength(arg1);
                 System.out.println("BaseLength: " + arg1);
 
                 System.out.println("Type in the Height of the Triangle");
-                double arg2 = input.nextDouble();
-                triangle.setHeight(arg2);
+                double arg2 = scanner.nextDouble();
+                this.setHeight(arg2);
                 System.out.println("Height: " + arg2);
 
-                System.out.printf("Area of Triangle is %.3f", triangle.area());
+                System.out.printf("Area of Triangle is %.3f", this.area());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
 
     @Override
-    public void calculatePerimeter() {
-        triangle = new Triangle();
+    public void calculatePerimeter(Scanner scanner) {
         while (true) {
             try {
                 System.out.println("Type in SideLength-1 of the Triangle");
-                double arg1 = input.nextDouble();
-                triangle.setSideLength1(arg1);
+                double arg1 = scanner.nextDouble();
+                this.setSideLength1(arg1);
                 System.out.println("SideLength-1: " + arg1);
 
                 System.out.println("Type in SideLength-2 of the Triangle");
-                double arg2 = input.nextDouble();
-                triangle.setSideLength2(arg2);
+                double arg2 = scanner.nextDouble();
+                this.setSideLength2(arg2);
                 System.out.println("SideLength-2: " + arg2);
 
                 System.out.println("Type in BaseLength of the Triangle");
-                double arg3 = input.nextDouble();
-                triangle.setBaseLength(arg3);
+                double arg3 = scanner.nextDouble();
+                this.setBaseLength(arg3);
                 System.out.println("BaseLength: " + arg3);
 
-                System.out.printf("Perimeter of Triangle is %.3f", triangle.perimeter());
+                System.out.printf("Perimeter of Triangle is %.3f", this.perimeter());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }

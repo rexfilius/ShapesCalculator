@@ -7,9 +7,6 @@ import java.util.Scanner;
 
 public class Square extends Shape {
 
-    Square square;
-    Scanner input = new Scanner(System.in);
-
     @Override
     public double area() {
         return getSideLength() * getSideLength();
@@ -21,39 +18,37 @@ public class Square extends Shape {
     }
 
     @Override
-    public void calculateArea() {
-        square = new Square();
+    public void calculateArea(Scanner scanner) {
         while (true) {
             try {
-                getSideLengthOfSquare();
-                System.out.printf("Area of Square is %.3f", square.area());
+                getSideLengthOfSquare(scanner);
+                System.out.printf("Area of Square is %.3f", this.area());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
 
     @Override
-    public void calculatePerimeter() {
-        square = new Square();
+    public void calculatePerimeter(Scanner scanner) {
         while (true) {
             try {
-                getSideLengthOfSquare();
-                System.out.printf("Perimeter of Square is %.3f", square.perimeter());
+                getSideLengthOfSquare(scanner);
+                System.out.printf("Perimeter of Square is %.3f", this.perimeter());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
 
-    private void getSideLengthOfSquare() {
+    private void getSideLengthOfSquare(Scanner scanner) {
         System.out.println("Type in the SideLength of the Square");
-        double arg = input.nextDouble();
-        square.setSideLength(arg);
+        double arg = scanner.nextDouble();
+        this.setSideLength(arg);
         System.out.println("SideLength: " + arg);
     }
 

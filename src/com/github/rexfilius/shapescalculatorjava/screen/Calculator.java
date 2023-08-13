@@ -19,9 +19,9 @@ public class Calculator {
             case "Triangle" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Triangle().calculateArea();
+                    new Triangle().calculateArea(scanner);
                 else
-                    new Triangle().calculatePerimeter();
+                    new Triangle().calculatePerimeter(scanner);
             }
             case "Circle" -> {
                 parameterInput = menu.secondMenu();
@@ -33,30 +33,30 @@ public class Calculator {
             case "Square" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Square().calculateArea();
+                    new Square().calculateArea(scanner);
                 else
-                    new Square().calculatePerimeter();
+                    new Square().calculatePerimeter(scanner);
             }
             case "Rectangle" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Rectangle().calculateArea();
+                    new Rectangle().calculateArea(scanner);
                 else
-                    new Rectangle().calculatePerimeter();
+                    new Rectangle().calculatePerimeter(scanner);
             }
             case "Parallelogram" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Parallelogram().calculateArea();
+                    new Parallelogram().calculateArea(scanner);
                 else
-                    new Parallelogram().calculatePerimeter();
+                    new Parallelogram().calculatePerimeter(scanner);
             }
             case "Trapezium" -> {
                 parameterInput = menu.secondMenu();
                 if (parameterInput.equals("Area"))
-                    new Trapezium().calculateArea();
+                    new Trapezium().calculateArea(scanner);
                 else
-                    new Trapezium().calculatePerimeter();
+                    new Trapezium().calculatePerimeter(scanner);
             }
         }
         Screen.thirdMenu();

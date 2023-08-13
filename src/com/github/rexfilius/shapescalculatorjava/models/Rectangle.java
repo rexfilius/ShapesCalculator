@@ -7,9 +7,6 @@ import java.util.Scanner;
 
 public class Rectangle extends Shape {
 
-    Rectangle rectangle;
-    Scanner input = new Scanner(System.in);
-
     @Override
     public double area() {
         return getLength() * getBreadth();
@@ -21,44 +18,42 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void calculateArea() {
-        rectangle = new Rectangle();
+    public void calculateArea(Scanner scanner) {
         while (true) {
             try {
-                getLengthAndBreadth();
-                System.out.printf("Area of Triangle is %.3f", rectangle.area());
+                getLengthAndBreadth(scanner);
+                System.out.printf("Area of Triangle is %.3f", this.area());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
 
     @Override
-    public void calculatePerimeter() {
-        rectangle = new Rectangle();
+    public void calculatePerimeter(Scanner scanner) {
         while (true) {
             try {
-                getLengthAndBreadth();
-                System.out.printf("Perimeter of Rectangle is %.3f", rectangle.perimeter());
+                getLengthAndBreadth(scanner);
+                System.out.printf("Perimeter of Rectangle is %.3f", this.perimeter());
                 break;
             } catch (Exception e) {
-                input.nextLine();
+                scanner.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
 
-    private void getLengthAndBreadth() {
+    private void getLengthAndBreadth(Scanner scanner) {
         System.out.println("Type in the Length of the Rectangle");
-        double arg1 = input.nextDouble();
-        rectangle.setLength(arg1);
+        double arg1 = scanner.nextDouble();
+        this.setLength(arg1);
         System.out.println("Length: " + arg1);
 
         System.out.println("Type in the Breadth of the Rectangle");
-        double arg2 = input.nextDouble();
-        rectangle.setBreadth(arg2);
+        double arg2 = scanner.nextDouble();
+        this.setBreadth(arg2);
         System.out.println("Breadth: " + arg2);
     }
 
