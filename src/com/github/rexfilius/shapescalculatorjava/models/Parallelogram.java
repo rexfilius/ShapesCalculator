@@ -23,7 +23,7 @@ public class Parallelogram extends Shape {
     @Override
     public void calculateArea() {
         parallelogram = new Parallelogram();
-        while(true) {
+        while (true) {
             try {
                 System.out.println("Type in the BaseLength of the Parallelogram");
                 double arg1 = input.nextDouble();
@@ -35,9 +35,9 @@ public class Parallelogram extends Shape {
                 parallelogram.setHeight(arg2);
                 System.out.println("Height: " + arg2);
 
-                System.out.println("Area of Parallelogram is " + parallelogram.area());
+                System.out.printf("Area of Parallelogram is %.3f", parallelogram.area());
                 break;
-            } catch(Exception e) {
+            } catch (Exception e) {
                 input.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
@@ -47,7 +47,7 @@ public class Parallelogram extends Shape {
     @Override
     public void calculatePerimeter() {
         parallelogram = new Parallelogram();
-        while(true) {
+        while (true) {
             try {
                 System.out.println("Type in the BaseLength of the Parallelogram");
                 double arg1 = input.nextDouble();
@@ -59,13 +59,13 @@ public class Parallelogram extends Shape {
                 parallelogram.setSideLength(arg2);
                 System.out.println("SideLength: " + arg2);
 
-                System.out.println("Perimeter of Parallelogram is " + parallelogram.perimeter());
+                System.out.printf("Perimeter of Parallelogram is %.3f", parallelogram.perimeter());
                 break;
-            } catch(Exception e) {
+            } catch (Exception e) {
                 input.nextLine();
                 System.out.println(Screen.INVALID_DATA);
             }
         }
     }
-    
+
 }

@@ -26,7 +26,7 @@ public class Rectangle extends Shape {
         while (true) {
             try {
                 getLengthAndBreadth();
-                System.out.println("Area of Triangle is " + rectangle.area());
+                System.out.printf("Area of Triangle is %.3f", rectangle.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -41,7 +41,7 @@ public class Rectangle extends Shape {
         while (true) {
             try {
                 getLengthAndBreadth();
-                System.out.println("Perimeter of Rectangle is " + rectangle.perimeter());
+                System.out.printf("Perimeter of Rectangle is %.3f", rectangle.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

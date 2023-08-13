@@ -26,7 +26,7 @@ public class Square extends Shape {
         while (true) {
             try {
                 getSideLengthOfSquare();
-                System.out.println("Area of Square is " + square.area());
+                System.out.printf("Area of Square is %.3f", square.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -41,7 +41,7 @@ public class Square extends Shape {
         while (true) {
             try {
                 getSideLengthOfSquare();
-                System.out.println("Perimeter of Square is " + square.perimeter());
+                System.out.printf("Perimeter of Square is %.3f", square.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

@@ -1,4 +1,3 @@
-
 package com.github.rexfilius.shapescalculatorjava.models;
 
 import com.github.rexfilius.shapescalculatorjava.screen.Screen;
@@ -28,7 +27,7 @@ public class Circle extends Shape {
         while (true) {
             try {
                 getRadiusOfCircle();
-                System.out.println("Area of Circle is " + circle.area());
+                System.out.printf("Area of Circle is %.3f", circle.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -43,7 +42,7 @@ public class Circle extends Shape {
         while (true) {
             try {
                 getRadiusOfCircle();
-                System.out.println("Circumference of Circle is " + circle.perimeter());
+                System.out.printf("Circumference of Circle is %.3f", circle.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

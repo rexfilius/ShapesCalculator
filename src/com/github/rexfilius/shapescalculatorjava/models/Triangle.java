@@ -35,7 +35,7 @@ public class Triangle extends Shape {
                 triangle.setHeight(arg2);
                 System.out.println("Height: " + arg2);
 
-                System.out.println("Area of Triangle is " + triangle.area());
+                System.out.printf("Area of Triangle is %.3f", triangle.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -64,7 +64,7 @@ public class Triangle extends Shape {
                 triangle.setBaseLength(arg3);
                 System.out.println("BaseLength: " + arg3);
 
-                System.out.println("Perimeter of Triangle is " + triangle.perimeter());
+                System.out.printf("Perimeter of Triangle is %.3f", triangle.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();

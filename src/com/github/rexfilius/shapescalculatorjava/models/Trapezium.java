@@ -40,7 +40,7 @@ public class Trapezium extends Shape {
                 trapezium.setHeight(arg3);
                 System.out.println("Height: " + arg3);
 
-                System.out.println("Area of Trapezium is " + trapezium.area());
+                System.out.printf("Area of Trapezium is %.3f", trapezium.area());
                 break;
             } catch (Exception e) {
                 input.nextLine();
@@ -74,7 +74,7 @@ public class Trapezium extends Shape {
                 trapezium.setSideLength2(arg4);
                 System.out.println("SideLength-2: " + arg4);
 
-                System.out.println("Perimeter of Trapezium is " + trapezium.perimeter());
+                System.out.printf("Perimeter of Trapezium is %.3f", trapezium.perimeter());
                 break;
             } catch (Exception e) {
                 input.nextLine();
